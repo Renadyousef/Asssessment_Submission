@@ -3,6 +3,6 @@ import { sayHello } from "../controllers/helloController.js";
 
 const router = express.Router();
 
-router.get("/hello", sayHello);
+router.post("/hello", sayHello);
 
 export default router;
