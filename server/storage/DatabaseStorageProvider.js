@@ -1,7 +1,7 @@
 //Stores data in sql connect this to postgres
 //metadata (always used) in any service btw , actual data saved where based on service
 
-import StorageProvider from "./StorageProvider";
+import StorageProvider from "./StorageProvider.js";
 
 class DatabaseStorageProvider extends StorageProvider {
   constructor(db) {

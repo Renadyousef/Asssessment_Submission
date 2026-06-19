@@ -1,8 +1,8 @@
-// all services
-import LocalStorageProvider from "./LocalStorageProvider";
-import DatabaseStorageProvider from "./DatabaseStorageProvider";
+// all services storage factory 
+import LocalStorageProvider from "./LocalStorageProvider.js";
+import DatabaseStorageProvider from "./DatabaseStorageProvider.js";
 
-//switcher enabling
+//switcher enabling to create instances or any service based on config file
 function createStorageProvider(config, db) {
   switch (config.STORAGE_TYPE) {
     case "local":

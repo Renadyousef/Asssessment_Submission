@@ -1,4 +1,5 @@
 //Any request to the service should be authenticated using Bearer token authentication.
+// created dummy key as auth key simialr to jwt logic
 function auth(req, res, next) {
   const header = req.headers.authorization;
 

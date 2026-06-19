@@ -1,7 +1,7 @@
 // store locally in files  write into files
 import { writeFileSync, readFileSync } from "fs";
 import { join } from "path";
-import StorageProvider from "./StorageProvider";
+import StorageProvider from "./StorageProvider.js";
 
 class LocalStorageProvider extends StorageProvider {
   constructor(basePath) {

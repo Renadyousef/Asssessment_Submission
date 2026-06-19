@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
-import helloRoutes from "./routes/helloRoutes.js";
+
 import createStorageProvider from "./storage/StorageSwitcher.js"; // storage factory
 import BlobService from "./services/BlobService.js";
-import BlobController from "./controllers/BlobController.js";
-import blobRoutes from "./routes/blobRoutes.js";
+import BlobController from "./controllers/blobController.js";
+import blobRoutes from "./routes/blobs.js";
 import auth from "./middleware/auth.js";
 import db from "./DB_connection/db.js";
 
@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// storage
+// storage instance
 const storage = createStorageProvider(process.env, db);
 
 // service
