@@ -9,7 +9,7 @@ class BlobService {
 
     await this.storage.save(id, buffer); //save into service provider based on type?
 
-    await this.db.query( //always save into meta data in postgres?
+    await this.db.query( //always save into meta data in postgres
       "INSERT INTO blobs (id, size, storage_type, created_at) VALUES ($1, $2, $3, NOW())",
       [id, buffer.length, process.env.STORAGE_TYPE]
     );

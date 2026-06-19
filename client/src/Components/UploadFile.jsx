@@ -32,7 +32,7 @@ export default function UploadFile({ onUpload }) {
     const base64 = await convertToBase64(file);
 
     setUploading(true);
-    // use filename as id (or you can generate uuid)
+    // use filename as id
     await onUpload(file.name, base64);
     setUploading(false);
     setSuccess(true);
