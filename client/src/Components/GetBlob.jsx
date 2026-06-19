@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function GetBlob({ onFetch }) {
+export default function GetBlob({ onFetch, loading }) {
   const [id, setId] = useState("");
 
   return (
@@ -16,8 +16,9 @@ export default function GetBlob({ onFetch }) {
       <button
         className="btn btn-success"
         onClick={() => onFetch(id)}
+        disabled={loading}
       >
-        Fetch
+        {loading ? "Fetching…" : "Fetch"}
       </button>
     </div>
   );

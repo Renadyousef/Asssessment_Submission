@@ -1,4 +1,4 @@
-// store in s3 or Compatible Storage Service as json data bases? or as they said "Use HTTP requests to MinIO"
+// “fake AWS S3”.
 import StorageProvider from "./StorageProvider.js";
 class S3StorageProvider extends StorageProvider {
   async save(id, buffer) {}

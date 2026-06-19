@@ -1,0 +1,129 @@
+:root {
+  --purple-primary: #7c3aed;
+  --purple-hover:   #6d28d9;
+  --bg-main:        #000000;
+  --bg-card:        #ede9fe;
+  --text-on-card:   #1e1b4b;
+  --border-purple:  rgba(124, 58, 237, 0.22);
+}
+
+/* ── Base ─────────────────────────────────────── */
+body {
+  background-color: var(--bg-main);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* ── Page title ───────────────────────────────── */
+.app-title {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-left: 4px solid var(--purple-primary);
+  padding-left: 0.8rem;
+}
+
+/* ── Cards ────────────────────────────────────── */
+.card {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-purple) !important;
+  color: var(--text-on-card) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 28px rgba(124, 58, 237, 0.14);
+}
+
+.card h5 {
+  color: var(--purple-primary);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+/* ── Inputs ───────────────────────────────────── */
+.form-control {
+  background-color: #ffffff !important;
+  border: 1.5px solid var(--border-purple) !important;
+  color: var(--text-on-card) !important;
+  border-radius: 8px !important;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-control::placeholder {
+  color: #9ca3af !important;
+}
+
+.form-control:focus {
+  background-color: #ffffff !important;
+  border-color: var(--purple-primary) !important;
+  color: var(--text-on-card) !important;
+  box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.2) !important;
+}
+
+/* ── Buttons ──────────────────────────────────── */
+.btn-primary,
+.btn-success {
+  background-color: var(--purple-primary) !important;
+  border-color: var(--purple-primary) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em;
+  transition: background-color 0.18s ease, transform 0.1s ease !important;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+  background-color: var(--purple-hover) !important;
+  border-color: var(--purple-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active,
+.btn-success:active {
+  transform: translateY(0) !important;
+}
+
+.btn-primary:focus,
+.btn-success:focus {
+  box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.38) !important;
+}
+
+.btn:disabled {
+  opacity: 0.55 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* ── Upload success alert ─────────────────────── */
+.upload-success {
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* ── Loading bar ──────────────────────────────── */
+.loading-bar {
+  height: 5px;
+  border-radius: 4px;
+  background-color: rgba(124, 58, 237, 0.12);
+  overflow: hidden;
+}
+
+.loading-bar .progress-bar {
+  background-color: var(--purple-primary) !important;
+}
+
+/* ── Result image ─────────────────────────────── */
+.result-image {
+  border-radius: 10px;
+  border: 1.5px solid var(--border-purple);
+}
+
+/* ── Result name label ────────────────────────── */
+.result-label strong {
+  color: var(--purple-primary);
+}
